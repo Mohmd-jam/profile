@@ -10,13 +10,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: #4d4d4d;
   font-family: "Poppins", sans-serif;
+  padding: 15px;
 }
 
 .container {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   border-radius: 30px;
   background: #4d4d4d;
   box-shadow: 20px 20px 60px #343434, -20px -20px 60px #3b3b3b;
@@ -38,6 +40,7 @@ body {
 
 .container h1 {
   color: rgb(216, 216, 216);
+  font-size: 1.8rem;
 }
 
 .container p {
@@ -55,4 +58,50 @@ body {
   margin: 10px;
   font-size: 40px;
   color: rgb(211, 211, 211);
+}
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .container .picture {
+    width: 140px;
+    height: 140px;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  .container p {
+    font-size: 16px;
+  }
+
+  .container .socials i {
+    font-size: 32px;
+    margin: 8px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container .picture {
+    width: 120px;
+    height: 120px;
+  }
+
+  .container h1 {
+    font-size: 1.3rem;
+  }
+
+  .container p {
+    font-size: 14px;
+  }
+
+  .container .socials i {
+    font-size: 28px;
+    margin: 6px;
+  }
 }
